@@ -9,5 +9,15 @@ export JVM_ARGUMENTS="-Xms${RAM_USAGE} -Xmx${RAM_USAGE} -XX:+UseG1GC -XX:+Parall
 
 export DOWNLOAD_URL="https://papermc.io/api/v1/paper/${MCVER}/latest/download"
 export VERSION_LIST="https://papermc.io/api/v1/paper/${MCVER}/latest"
+
+# For Waterfall/Travertine or Bungeecord, you might prefer these settings
+# By default, this uses Aikar's Waterfall flags as of 7/16/2020. Change or remove them if needed
+# export JARFILE="waterfall-${MCVER}.jar"
+# export RAM_USAGE="512M"
+# export JVM_ARGUMENTS="-Xms${RAM_USAGE} -Xmx${RAM_USAGE} -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -jar ${JARFILE}.jar"
+# export DOWNLOAD_URL="https://papermc.io/api/v1/waterfall/${MCVER}/latest/download"
+# export VERSION_LIST="https://papermc.io/api/v1/waterfall/${MCVER}/latest"
+# export EULA_REQUIRED=false
+
 export UPDATE_FILE="current_version.txt"
 export EULA_REQUIRED=true
