@@ -20,6 +20,11 @@ check_libraries() {
         echo "Java command \"${JAVACMD}\" not found. It is required for running the server"
         exit
     fi
+    if ! command -v nc &> /dev/null
+    then
+        echo "Netcat command (nc) not found. It is required for checking if server port is running already"
+        exit
+    fi    
 }
 
 update_check() {
