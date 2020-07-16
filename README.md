@@ -6,8 +6,9 @@ There are two files:
 - settings.sh (the variables or settings that can be customized)
 
 Requirements to use:
-- jq (`sudo apt install jq`)
+- jq (for parsing json) (`sudo apt install jq`)
 - Java
+- Netcat (for checking if server is running.) (`sudo apt install netcat`)
 - bash
 
 Features:
