@@ -1,6 +1,5 @@
 export MCVER="1.16.1"
 export JARFILE="paper-${MCVER}.jar"
-export LAUNCHWRAPPER="net/minecraft/launchwrapper/1.11.2/launchwrapper-1.12.2.jar"
 export JAVACMD="java"
 export MC_PORT="25565"
 
