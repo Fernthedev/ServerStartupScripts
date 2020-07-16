@@ -3,7 +3,7 @@ This is a repo that contains some useful scripts for Minecraft servers and is fa
 
 There are two files: 
 - ServerStart.sh (the script for starting the server)
-- settings.sh (the variables or settings that can be customnized)
+- settings.sh (the variables or settings that can be customized)
 
 Requirements to use:
 - jq (`sudo apt install jq`)
