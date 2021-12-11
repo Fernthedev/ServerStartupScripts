@@ -38,11 +38,11 @@ update_check() {
         current_version=$(<${UPDATE_FILE})
     fi
 
-    latest_version=`curl -JLs ${VERSION_LIST} | jq -r .build` # Gets the build key of the JSON result
+    # Gets the build key of the JSON result
 
-    echo "USING VERSION ${current_version} WHILE LATEST IS ${latest_version}"
+    echo "USING VERSION ${current_version} WHILE LATEST IS ${LATEST_VERSION}"
 
-    if [ ! ${current_version} -eq ${latest_version} ] ; then
+    if [ ! ${current_version} -eq ${LATEST_VERSION} ] ; then
 
         echo "UPDATING TO NEW VERSION"
         curl -JLo ${JARFILE} ${DOWNLOAD_URL}
@@ -51,7 +51,7 @@ update_check() {
             echo "FAILED TO DOWNLOAD LATEST VERSION OF MINECRAFT SERVER"
         fi
 
-        echo ${latest_version} > ${UPDATE_FILE}
+        echo ${LATEST_VERSION} > ${UPDATE_FILE}
     fi
 }
 
